@@ -4,7 +4,7 @@ import React from 'react'
 const Items = ({ url, name, price, qty, cartId }) => {
 
     const removeItem = () => {
-        axios.delete(`http://localhost:3000/cart/${cartId}`)
+        axios.delete(`http://localhost:3000/item/${cartId}`)
         alert("item Removed")
     }
 
@@ -17,7 +17,7 @@ const Items = ({ url, name, price, qty, cartId }) => {
                 <p>{name}</p>
                 <p>Price : {price}</p>
                 <span>Qty :{qty} </span>
-                <button className='btn btn-danger d-block' onClick={removeItem}>Remove</button>
+                <button className='btn btn-danger d-block' onClick={() => { removeItem() }}>Remove</button>
             </span>
 
 

@@ -218,19 +218,18 @@ app.post("/order", async (req, res) => {
   res.send("card added");
 });
 
-app.delete("/cart", async (req, res) => {
-  await Cart.deleteMany({});
-  res.send("Clear Cart");
-});
-
-app.delete("/cart/:id", async (req, res) => {
+app.delete("/item/:id", async (req, res) => {
   let { id } = req.params;
-  await Cart.deleteOne({ _id: id });
-  res.redirect("/cart");
+  await Cart.findOneAndDelete({ productId: id });
+  res.send("item deleted");
 });
 
 app.get("/", (req, res) => {
   res.send("Done");
+});
+app.delete("/cart", async (req, res) => {
+  await Cart.deleteMany({});
+  res.send("Clear Cart");
 });
 app.listen(PORT, () => {
   console.log(`App listning on port ${PORT}`);

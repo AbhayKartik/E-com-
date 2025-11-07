@@ -44,7 +44,7 @@ const Cart = ({ cart }) => {
             <span onClick={cartClose} style={{ fontSize: "30px", position: "absolute", right: "0px" }}><IoCloseCircleOutline /></span>
             {items.map((data) => (
 
-                <Items url={data.productUrl} name={data.name} price={data.price} qty={data.qty} cartId={data._id} key={data.name} />
+                <Items url={data.productUrl} name={data.name} price={data.price} qty={data.qty} cartId={data.productId} key={data.name} />
             ))}
             <div style={{ position: "absolute", bottom: "10vh", padding: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
 
