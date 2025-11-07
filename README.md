@@ -1,4 +1,6 @@
-Homepage ![alt text](./frontend/src/assets/image.png)
+ <h1>Homepage</h1>br
+ 
+![alt text](./frontend/src/assets/image.png)
 Cart ![alt text](./frontend/src/assets/image-1.png)
 checkout ![alt text](./frontend/src/assets/image-2.png)
 Order Data Saved in DB ![alt text](./frontend/src/assets/image-3.png)
