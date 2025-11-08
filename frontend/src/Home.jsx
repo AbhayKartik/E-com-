@@ -25,7 +25,7 @@ const Home = () => {
                     gap: "20px", // space between cards
                     justifyContent: "center",
                 }}>
-                    <span style={{ position: "absolute", right: "10px", fontSize: "30px" }} onClick={() => { setIsCartOpen(true) }}> <AiOutlineShoppingCart /> </span>
+                    <span style={{ position: "absolute", right: "10px", fontSize: "30px", cursor: "pointer" }} onClick={() => { setIsCartOpen(true) }}> <AiOutlineShoppingCart /> </span>
                     {isCartOpen && <Cart cart={setIsCartOpen} />}
                     {allProducts.map((item) => (
 

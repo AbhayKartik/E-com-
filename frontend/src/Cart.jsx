@@ -41,7 +41,7 @@ const Cart = ({ cart }) => {
     return (
         <div style={{ position: "absolute", right: "0", height: "100vh", width: "20%", backgroundColor: "white", zIndex: "100" }}>
             <p className='fs-4 d-inline'> Items : {items.length}</p>
-            <span onClick={cartClose} style={{ fontSize: "30px", position: "absolute", right: "0px" }}><IoCloseCircleOutline /></span>
+            <span onClick={cartClose} style={{ fontSize: "30px", position: "absolute", right: "0px", cursor: "pointer" }}><IoCloseCircleOutline /></span>
             {items.map((data) => (
 
                 <Items url={data.productUrl} name={data.name} price={data.price} qty={data.qty} cartId={data.productId} key={data.name} />
